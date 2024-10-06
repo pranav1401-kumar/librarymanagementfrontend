@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Library Management System</h1>
+        <div id="auth-section">
+            <h2>Authentication</h2>
+            <form id="auth-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <select id="role">
+                    <option value="MEMBER">Member</option>
+                    <option value="LIBRARIAN">Librarian</option>
+                </select>
+                <button type="submit" id="auth-button">Sign Up</button>
+            </form>
+            <button id="switch-auth">Switch to Login</button>
+        </div>
+        <div id="member-section" class="hidden">
+            <h2>Member Dashboard</h2>
+            <div id="book-list"></div>
+            <h3>Borrow History</h3>
+            <div id="borrow-history"></div>
+            <button id="delete-account">Delete Account</button>
+            <button id="member-go-back">Go Back</button>
+        </div>
+        <div id="librarian-section" class="hidden">
+            <h2>Librarian Dashboard</h2>
+            <form id="add-book-form">
+                <input type="text" id="book-title" placeholder="Book Title" required>
+                <input type="text" id="book-author" placeholder="Author" required>
+                <input type="text" id="book-isbn" placeholder="ISBN" required>
+                <button type="submit">Add Book</button>
+            </form>
+            <div id="librarian-book-list"></div>
+            <h3>User Management</h3>
+            <div id="user-list"></div>
+            <button id="librarian-go-back">Go Back</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
